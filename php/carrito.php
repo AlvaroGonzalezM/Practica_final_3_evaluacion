@@ -26,12 +26,17 @@ $carrito = $_SESSION['carrito'] ?? [];
     </header>
 
     <!-- Contenido del carrito -->
-    <main class="carrito-container">
+    <main class="carrito-container"> 
         <?php if (empty($carrito)): ?>
             <p>Tu carrito está vacío.</p>
         <?php else: ?>
             <?php foreach ($carrito as $ref => $item): ?>
+                <?php
+                    $numero = intval(substr($ref, 1));
+                    $imagen = "../imagen_productos/producto$numero.jpg";
+                ?>
                 <div class="producto">
+                    <img src="<?= $imagen ?>" alt="<?= htmlspecialchars($item['nombre']) ?>">
                     <div class="descripcion">
                         <p><?= htmlspecialchars($item['nombre']) ?></p>
                         <p><?= number_format($item['precio'], 2) ?> €</p>
@@ -49,6 +54,7 @@ $carrito = $_SESSION['carrito'] ?? [];
             </form>
         <?php endif; ?>
     </main>
+
 
     
     <footer>

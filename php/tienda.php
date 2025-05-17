@@ -40,11 +40,12 @@ $resultado = $conn->query("SELECT * FROM productos");
 
     
     <section class="bienvenida">
-        <p><strong>Explora nuestra tienda</strong></p>
-        <p>Todo lo que necesitas, en un solo lugar. <br>
-        En esta sección encontrarás una cuidada selección de accesorios tecnológicos pensados para tí.
-    </p>
-        
+        <div class="overlay">
+            <p><strong>Explora nuestra tienda</strong></p>
+            <p>Todo lo que necesitas, en un solo lugar. <br>
+            En esta sección encontrarás una cuidada selección de accesorios tecnológicos pensados para tí.
+            </p>
+        </div>
     </section>
 
     

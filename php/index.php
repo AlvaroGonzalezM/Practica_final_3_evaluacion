@@ -39,15 +39,15 @@ $resultado = $conn->query("SELECT * FROM productos");
 
     
     <section class="bienvenida">
-    <div class="overlay">
-        <p><strong>Bienvenido a la <br> Tienda Virtual de Tecnología</strong></p>
-        <p>¡Donde la tecnología se encuentra con el estilo!</p>
-        <p>Descubre nuestra amplia selección de accesorios tecnológicos diseñados para hacer tu vida más fácil, conectada y con mucho más estilo. <br> 
-        Calidad, innovación y buenos precios, todo en un solo lugar. <br>
-        Explora, elige y lleva tu experiencia digital al siguiente nivel
-        </p>
-    </div>
-</section>
+        <div class="overlay">
+            <p><strong>Bienvenido a la <br> Tienda Virtual de Tecnología</strong></p>
+            <p>¡Donde la tecnología se encuentra con el estilo!</p>
+            <p>Descubre nuestra amplia selección de accesorios tecnológicos diseñados para hacer tu vida más fácil, conectada y con mucho más estilo. <br> 
+            Calidad, innovación y buenos precios, todo en un solo lugar. <br>
+            Explora, elige y lleva tu experiencia digital al siguiente nivel
+            </p>
+        </div>
+    </section>
 
 
     

@@ -6,6 +6,7 @@
     <title>Registro</title>
     <link rel="stylesheet" href="../styles/footer-header.css">
     <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../styles/signup.css">
 </head>
 <body>
 
@@ -21,32 +22,34 @@
 
     <h1>Registro</h1>
 
-    <form action="../php/procesar_signup.php" method="post">
+    <div class="signup-container">
+        <form action="../php/procesar_signup.php" method="post">
 
-        <label for="usuario">Usuario: </label>
-        <input name="usuario" type="text" required><br><br>
+            <label for="usuario">Usuario: </label>
+            <input name="usuario" type="text" required><br><br>
 
-        <label for="contraseña">Contraseña: </label>
-        <input name="contraseña" type="password" required><br><br>
+            <label for="contraseña">Contraseña: </label>
+            <input name="contraseña" type="password" required><br><br>
 
-        <label for="nombre">Nombre: </label>
-        <input name="nombre" type="text" required><br><br>
+            <label for="nombre">Nombre: </label>
+            <input name="nombre" type="text" required><br><br>
 
-        <label for="apellidos">Apellidos: </label>
-        <input name="apellidos" type="text"requiered><br><br>
+            <label for="apellidos">Apellidos: </label>
+            <input name="apellidos" type="text"requiered><br><br>
 
-        <label for="correo">Correo: </label>
-        <input name="correo" type="email"requiered><br><br>
+            <label for="correo">Correo: </label>
+            <input name="correo" type="email"requiered><br><br>
 
-        <label for="fecha_nacimiento">Fecha de Nacimiento: </label>
-        <input type="date" name="fecha_nacimiento" required><br><br>
+            <label for="fecha_nacimiento">Fecha de Nacimiento: </label>
+            <input type="date" name="fecha_nacimiento" required><br><br>
 
-        <label for="genero">Genero: </label>
-        <input type="text" name="genero" required><br><br>
+            <label for="genero">Genero: </label>
+            <input type="text" name="genero" required><br><br>
 
-        <button type="submit">Registrarse</button>
+            <button type="submit">Registrarse</button>
 
-    </form>
+        </form>
+    </div>
 
     <footer>
         <div class="footer-links">
