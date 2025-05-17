@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="../styles/footer-header.css">
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">LOGO</div>
+        <nav>
+            <a href="../php/index.php">Inicio</a>
+            <a href="../php/tienda.php">Tienda</a>
+            <a href="../php/carrito.php">Carrito</a>
+            <a href="../html/login.html">Login</a>
+        </nav>
+    </header>
+
+    <h1>Registro</h1>
+
+    <form action="../php/procesar_signup.php" method="post">
+
+        <label for="usuario">Usuario: </label>
+        <input name="usuario" type="text" required><br><br>
+
+        <label for="contraseña">Contraseña: </label>
+        <input name="contraseña" type="password" required><br><br>
+
+        <label for="nombre">Nombre: </label>
+        <input name="nombre" type="text" required><br><br>
+
+        <label for="apellidos">Apellidos: </label>
+        <input name="apellidos" type="text"requiered><br><br>
+
+        <label for="correo">Correo: </label>
+        <input name="correo" type="email"requiered><br><br>
+
+        <label for="fecha_nacimiento">Fecha de Nacimiento: </label>
+        <input type="date" name="fecha_nacimiento" required><br><br>
+
+        <label for="genero">Genero: </label>
+        <input type="text" name="genero" required><br><br>
+
+        <button type="submit">Registrarse</button>
+
+    </form>
+
+    <footer>
+        <div class="footer-links">
+            <a href="../php/index.php">Inicio</a>
+            <a href="../php/tienda.php">Tienda</a>
+            <a href="../php/carrito.php">Carrito</a>
+            <a href="../html/login.html">Login</a>
+        </div>
+        <p class="copyright">© COPYRIGHT 2025</p>
+    </footer>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        if (params.get("error") === "usuario_existente") {
+            alert("El usuario ya existe");
+        }
+    </script>
+        
+    
+</body>
+</html>

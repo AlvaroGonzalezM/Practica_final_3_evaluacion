@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    text-align: center; 
+}
+
+.bienvenida {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    background-image: url('../img/img__bienvenida.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.bienvenida .overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 80%;
+}
+
+
+
+.productos {
+    padding: 20px;
+}
+
+/* Tabla  */
+.productos table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 80%;
+    max-width: 900px;
+}
+
+.productos th, .productos td {
+    padding: 12px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+.productos button {
+    padding: 6px 12px;
+    background-color: #4db8ff;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.productos button:hover {
+    background-color: #3399cc;
+}
+
