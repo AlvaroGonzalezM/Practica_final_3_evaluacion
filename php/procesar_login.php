@@ -16,6 +16,7 @@ if ($conn->connect_error) {
     die("Conexión fallida: " . $conn->connect_error);
 }
 
+// Guardar usuario en la sesión
 $_SESSION['usuario_'] = $_POST['usuario'];
 
 // Recoger datos del formulario del login
