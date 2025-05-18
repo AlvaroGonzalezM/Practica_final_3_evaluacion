@@ -1,6 +1,14 @@
 <?php 
 session_start();
 
+// Recojer de la sesión el nombre del usuario
+$usuario_ = $_SESSION['usuario'] ?? null;
+
+if (!isset($_SESSION['usuario_'])) {
+            header("Location: ../html/login.html");
+            exit;
+        }
+
 $host = "localhost";
 $usuario = "root";
 $contrasena = "";
@@ -32,15 +40,14 @@ $resultado = $conn->query("SELECT * FROM productos");
             <a href="#" class="activo">Inicio</a>
             <a href="tienda.php">Tienda</a>
             <a href="carrito.php">Carrito</a>
-            <a href="../html/login.html">Login</a>
-            <a href="../html/signup.html">Sign Up</a>
+            <a href="../php/cerrar_sesion.php">Cerrar Sesion</a>
         </nav>
     </header>
 
     
     <section class="bienvenida">
         <div class="overlay">
-            <p><strong>Bienvenido a la <br> Tienda Virtual de Tecnología</strong></p>
+            <p>Bienvenido <strong><?= htmlspecialchars($usuario_) ?> </strong> a la <br> Tienda Virtual de Tecnología</p>
             <p>¡Donde la tecnología se encuentra con el estilo!</p>
             <p>Descubre nuestra amplia selección de accesorios tecnológicos diseñados para hacer tu vida más fácil, conectada y con mucho más estilo. <br> 
             Calidad, innovación y buenos precios, todo en un solo lugar. <br>

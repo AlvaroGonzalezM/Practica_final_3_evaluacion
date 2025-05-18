@@ -1,4 +1,9 @@
 <?php
+// Iniciamos sesión para guardar el dato del nombre del usuario
+session_start();
+
+
+
 // Variables para la conexión
 $host = "localhost";
 $usuario = "root";
@@ -10,6 +15,8 @@ $conn = new mysqli($host, $usuario, $contrasena, $base_de_datos);
 if ($conn->connect_error) {
     die("Conexión fallida: " . $conn->connect_error);
 }
+
+$_SESSION['usuario_'] = $_POST['usuario'];
 
 // Recoger datos del formulario del login
 $usuario_input = $_POST['usuario'];

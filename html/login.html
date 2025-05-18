@@ -38,15 +38,13 @@
         </form>
     </div>
 
-    <footer>
-        <div class="footer-links">
-            <a href="../php/index.php">Inicio</a>
-            <a href="../php/tienda.php">Tienda</a>
-            <a href="../php/carrito.php">Carrito</a>
-            <a href="../html/signup.html">Sign Up</a>
-        </div>
-        <p class="copyright">© COPYRIGHT 2025</p>
-    </footer>
+    <!-- Logica mensaje de Sesion cerrada correctamente -->
+     <script>
+        const params = new URLSearchParams(window.location.search);
+        if (params.get("mensaje") === "sesion_cerrada") {
+            alert("Sesion cerrada correctamente");
+        }
+    </script>
 
 </body>
 </html>

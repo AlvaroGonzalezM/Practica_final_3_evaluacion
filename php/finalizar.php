@@ -24,8 +24,7 @@ unset($_SESSION['carrito']);
             <a href="index.php">Inicio</a>
             <a href="tienda.php">Tienda</a>
             <a href="carrito.php">Carrito</a>
-            <a href="../html/login.html">Login</a>
-            <a href="../html/signup.html">Sign Up</a>
+            <a href="../php/cerrar_sesion.php">Cerrar Sesion</a>
         </nav>
     </header>
 

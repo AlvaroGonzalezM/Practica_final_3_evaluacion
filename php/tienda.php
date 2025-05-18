@@ -1,6 +1,14 @@
 <?php 
 session_start();
 
+// Recojer de la sesión el nombre del usuario
+$usuario_ = $_SESSION['usuario'] ?? null;
+
+if (!isset($_SESSION['usuario_'])) {
+            header("Location: ../html/login.html");
+            exit;
+        }
+
 $host = "localhost";
 $usuario = "root";
 $contrasena = "";
@@ -32,8 +40,7 @@ $resultado = $conn->query("SELECT * FROM productos");
             <a href="index.php">Inicio</a>
             <a href="#" class="activo">Tienda</a>
             <a href="carrito.php">Carrito</a>
-            <a href="../html/login.html">Login</a>
-            <a href="../html/signup.html">Sign Up</a>
+            <a href="../php/cerrar_sesion.php">Cerrar Sesion</a>
 
         </nav>
     </header>
@@ -41,7 +48,7 @@ $resultado = $conn->query("SELECT * FROM productos");
     
     <section class="bienvenida">
         <div class="overlay">
-            <p><strong>Explora nuestra tienda</strong></p>
+            <p> <strong><?= htmlspecialchars($usuario_) ?></strong> Explora nuestra tienda </p>
             <p>Todo lo que necesitas, en un solo lugar. <br>
             En esta sección encontrarás una cuidada selección de accesorios tecnológicos pensados para tí.
             </p>

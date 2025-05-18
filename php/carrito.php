@@ -1,6 +1,14 @@
 <?php
 session_start();
 $carrito = $_SESSION['carrito'] ?? [];
+
+// Recojer de la sesión el nombre del usuario
+$usuario_ = $_SESSION['usuario'] ?? null;
+
+if (!isset($_SESSION['usuario_'])) {
+            header("Location: ../html/login.html");
+            exit;
+        }
 ?>
 
 <!DOCTYPE html>
@@ -20,8 +28,7 @@ $carrito = $_SESSION['carrito'] ?? [];
             <a href="index.php">Inicio</a>
             <a href="tienda.php">Tienda</a>
             <a href="#" class="activo">Carrito</a>
-            <a href="../html/login.html">Login</a>
-            <a href="../html/signup.html">Sign Up</a>
+            <a href="../php/cerrar_sesion.php">Cerrar Sesion</a>
         </nav>
     </header>
 
