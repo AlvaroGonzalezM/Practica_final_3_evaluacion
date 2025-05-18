@@ -6,3 +6,4 @@ session_destroy();       // Destruye la sesión
 // Redirigir al usuario al login u otra página
 header("Location: ../html/login.html?mensaje=sesion_cerrada");
 exit();
+?>

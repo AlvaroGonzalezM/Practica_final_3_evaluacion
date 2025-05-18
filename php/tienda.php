@@ -5,7 +5,7 @@ session_start();
 $usuario_ = $_SESSION['usuario'] ?? null;
 
 if (!isset($_SESSION['usuario_'])) {
-            header("Location: ../html/login.html");
+            header("Location: ../html/login.html?mensaje=inicio_sesion_requerido");
             exit;
         }
 

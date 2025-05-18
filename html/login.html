@@ -43,6 +43,8 @@
         const params = new URLSearchParams(window.location.search);
         if (params.get("mensaje") === "sesion_cerrada") {
             alert("Sesion cerrada correctamente");
+        } else if (params.get("mensaje") === "inicio_sesion_requerido") {
+            alert("Debes iniciar sesión para entrar a la tienda.")
         }
     </script>
 
