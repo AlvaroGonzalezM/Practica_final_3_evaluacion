@@ -23,7 +23,6 @@ if (!isset($_SESSION['usuario_'])) {
 
     
     <header>
-        <div class="logo">LOGO</div>
         <nav>
             <a href="index.php">Inicio</a>
             <a href="tienda.php">Tienda</a>

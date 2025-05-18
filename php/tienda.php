@@ -35,7 +35,6 @@ $resultado = $conn->query("SELECT * FROM productos");
 
     
     <header>
-        <div class="logo">LOGO</div>
         <nav>
             <a href="index.php">Inicio</a>
             <a href="#" class="activo">Tienda</a>
