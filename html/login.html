@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio de Sesion</title>
-    <link rel="stylesheet" href="../styles/footer-header.css">
+    
     <link rel="stylesheet" href="../styles/styles.css">
     <link rel="stylesheet" href="../styles/login.css">
+    <link rel="stylesheet" href="../styles/footer-header.css">
+    <link rel="stylesheet" href="../styles/update-footer.css"> <!-- Fichero css para las estructuras del html, body y main y no afectar al resto de ficheros con el header y footer-->
 </head>
 <body>
 
@@ -21,21 +23,33 @@
 
     <h1>Inicio de Sesion</h1>
 
-    <div class="login-container">
-        <form action="../php/procesar_login.php" method="post">
+    <main>
+        <div class="login-container">
+            <form action="../php/procesar_login.php" method="post">
 
-            
+                
 
-            <label for="usuario">Usuario: </label>
-            <input name="usuario" type="text" required><br><br>
+                <label for="usuario">Usuario: </label>
+                <input name="usuario" type="text" required><br><br>
 
-            <label for="contraseña">Contraseña: </label>
-            <input name="contraseña" type="password" required><br><br>
+                <label for="contraseña">Contraseña: </label>
+                <input name="contraseña" type="password" required><br><br>
 
-            <button type="submit">Iniciar Sesion</button>
+                <button type="submit">Iniciar Sesion</button>
 
-        </form>
-    </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="../php/index.php">Inicio</a>
+            <a href="../php/tienda.php">Tienda</a>
+            <a href="../php/carrito.php">Carrito</a>
+            <a href="../html/login.html">Login</a>
+        </div>
+        <p class="copyright">© COPYRIGHT 2025</p>
+    </footer>
 
     <!-- Logica mensaje de Sesion cerrada correctamente -->
      <script>

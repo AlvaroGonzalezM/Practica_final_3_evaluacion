@@ -1,13 +1,13 @@
 <?php 
 session_start();
 
-// Recojer de la sesión el nombre del usuario
-$usuario_ = $_SESSION['usuario'] ?? null;
-
+// Verificar que haya iniciado sesión
 if (!isset($_SESSION['usuario_'])) {
-            header("Location: ../html/login.html?mensaje=inicio_sesion_requerido");
-            exit;
-        }
+    header("Location: ../html/login.html?mensaje=inicio_sesion_requerido");
+    exit;
+}
+
+$usuario_ = $_SESSION['usuario_'];
 
 $host = "localhost";
 $usuario = "root";
@@ -46,7 +46,7 @@ $resultado = $conn->query("SELECT * FROM productos");
 
     
     <section class="bienvenida">
-        <div class="overlay">
+        <div class="overlay"> <!-- Mostrar el nombre de usuario con el que ha iniciado sesión -->
             <p> <strong><?= htmlspecialchars($usuario_) ?></strong> Explora nuestra tienda </p>
             <p>Todo lo que necesitas, en un solo lugar. <br>
             En esta sección encontrarás una cuidada selección de accesorios tecnológicos pensados para tí.

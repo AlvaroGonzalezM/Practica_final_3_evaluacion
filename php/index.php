@@ -2,12 +2,12 @@
 session_start();
 
 // Recojer de la sesión el nombre del usuario
-$usuario_ = $_SESSION['usuario'] ?? null;
-
 if (!isset($_SESSION['usuario_'])) {
-            header("Location: ../html/login.html?mensaje=inicio_sesion_requerido");
-            exit;
-        }
+    header("Location: ../html/login.html?mensaje=inicio_sesion_requerido");
+    exit;
+}
+
+$usuario_ = $_SESSION['usuario_'];
 
 $host = "localhost";
 $usuario = "root";
@@ -45,7 +45,7 @@ $resultado = $conn->query("SELECT * FROM productos");
 
     
     <section class="bienvenida">
-        <div class="overlay">
+        <div class="overlay"><!-- Mostrar el nombre de usuario con el que ha iniciado sesión -->
             <p>Bienvenido <strong><?= htmlspecialchars($usuario_) ?> </strong> a la <br> Tienda Virtual de Tecnología</p>
             <p>¡Donde la tecnología se encuentra con el estilo!</p>
             <p>Descubre nuestra amplia selección de accesorios tecnológicos diseñados para hacer tu vida más fácil, conectada y con mucho más estilo. <br> 

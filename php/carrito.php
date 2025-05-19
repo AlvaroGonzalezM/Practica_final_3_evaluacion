@@ -2,13 +2,13 @@
 session_start();
 $carrito = $_SESSION['carrito'] ?? [];
 
-// Recojer de la sesión el nombre del usuario
-$usuario_ = $_SESSION['usuario'] ?? null;
-
+// Verificar que haya iniciado sesión
 if (!isset($_SESSION['usuario_'])) {
-            header("Location: ../html/login.html?mensaje=inicio_sesion_requerido");
-            exit;
-        }
+    header("Location: ../html/login.html?mensaje=inicio_sesion_requerido");
+    exit;
+}
+
+$usuario_ = $_SESSION['usuario_'];
 ?>
 
 <!DOCTYPE html>
@@ -16,8 +16,9 @@ if (!isset($_SESSION['usuario_'])) {
 <head>
     <meta charset="UTF-8">
     <title>Carrito</title>
-    <link rel="stylesheet" href="../styles/footer-header.css">
     <link rel="stylesheet" href="../styles/carrito.css">
+    <link rel="stylesheet" href="../styles/footer-header.css">
+    <link rel="stylesheet" href="../styles/update-footer.css"> <!-- Fichero css para las estructuras del html, body y main y no afectar al resto de ficheros con el header y footer-->
 </head>
 <body>
 
@@ -46,6 +47,7 @@ if (!isset($_SESSION['usuario_'])) {
                     <div class="descripcion">
                         <p><?= htmlspecialchars($item['nombre']) ?></p>
                         <p><?= number_format($item['precio'], 2) ?> €</p>
+                        <p>Cantidad: <?= number_format($item['cantidad']) ?></p>
                         <p>Subtotal: <?= number_format($item['precio'] * $item['cantidad'], 2) ?> €</p>
                         <form method="post" action="eliminar_carrito.php">
                             <input type="hidden" name="referencia" value="<?= $ref ?>">
